@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Website</title>
+</head>
+<body>
+    <header style="display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; padding: 20px 40px">
+        <h1>Tien Dat</h1>
+        <nav style="display: flex; flex-direction: row; gap: 20px">
+            <a href="index.html" style="color:black">
+                Homepage
+            </a>
+            <a href="projects.html" style="color:black">
+                Project
+            </a>
+            <a href="articles.html" style="color:black">
+                Articles
+            </a>
+            <a href="contact.html" style="color:black">
+                Contact
+            </a>
+        </nav>
+    </header>
+    <main style="max-width: 600px; margin: 0 auto; padding: 20px">
+        <h2>Contact</h2>
+        <p>Have a question or want to work together? Send me a message.</p>
+
+        <form action="#" method="post" style="display: flex; flex-direction: column; gap: 15px; border: 1px solid black; padding: 20px">
+            <div style="display: flex; flex-direction: column; gap: 5px">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 5px">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 5px">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p>Or email me directly: <a href="mailto:nvtdat30052006@gmail.com">tiendat@example.com</a></p>
+        <p><a href="https://github.com/nvtdat">GitHub profile</a></p>
+    </main>
+
+    <footer style="text-align: center; padding: 20px">
+        <p>&copy; 2026 Tien Dat</p>
+    </footer>
+</body>
+</html>

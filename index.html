@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Website</title>
+</head>
+<body>
+    <header style="display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; padding: 20px 40px">
+        <h1>Tien Dat</h1>
+        <nav style="display: flex; flex-direction: row; gap: 20px">
+            <a href="index.html" style="color:black">
+                Homepage
+            </a>
+            <a href="projects.html" style="color:black">
+                Project
+            </a>
+            <a href="articles.html" style="color:black">
+                Articles
+            </a>
+            <a href="contact" style="color:black">
+                Contact
+            </a>
+        </nav>
+    </header>
+    <main style="display: flex; justify-content: center; flex-direction: column; padding: 20px">
+        <section style="margin-bottom: 20px">
+            <div style="display: flex; flex-direction: column; text-align: center; padding: 40px;">
+                <h1>Frontend Developer</h1>
+                <span>html only without using styling</span>
+            </div>
+        </section>
+        
+        <section style=" display: flex; flex-direction: row; justify-content: center;">
+            <div style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid black">
+                <h2>Projects</h2>
+                <span>HTML only Portfolio</span>
+                <div style="display: flex; border-top: 1px solid black; padding-top: 10px; align-items: center">
+                    <a href="https://github.com/nvtdat/MyCalculator">Calculator</a>
+                </div>
+                <div style="display: flex; border-top: 1px solid black; padding-top: 10px;">
+                    <a href="https://github.com/nvtdat/Single-page-cv">Single Page CV</a>
+                </div>
+                <div style="display: flex; border-top: 1px solid black; padding-top: 10px;  margin-bottom: 20px">
+                    <a href="https://github.com/nvtdat/Weather_app">Weather App</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; text-align: left; padding: 20px; border: 1px solid black">
+                <div style="display: flex; flex-direction: column">
+                    <h2> Work Experience </h2>
+                    <h3> Roadmap sh </h3>
+                    <span>Solved all the frontend projects</span>
+                    <a href="https://github.com/nvtdat"> Visit my profile </a>
+                </div>
+                <div style="border-top: 1px solid black; margin-top: 20px"></div>
+                <div style="display: flex; flex-direction: column">
+                    <h2> Opensource Works </h2>
+                    <span> Contribute to over 50 projects on github. 
+                        Made my on projects on Github with over 200 stars
+                    </span>
+                    <a href="https://github.com/nvtdat"> Visit my profile </a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; padding: 20px; border: 1px solid black">
+                <h2> Education </h2>
+                <span>Graduated with 3.0 of 4.0 GPA. Experienced with design and application
+                    programming
+                </span>
+                <h3>These are the course that I took:</h3>
+                <ul>
+                    <li>Oriented Object Programming</li>
+                    <li>Data Structure and Algorithms</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Web Engineering</li>
+                    <li>DataBase Management</li>
+                </ul>
+
+            </div>
+        </section>
+        <section>
+            <h1>Review by my Teacher</h1>
+            <div style="display: flex; flex-direction: row; gap: 15px; margin: 20px" id="review-list">
+            </div>
+        </section>
+    </main>
+    <footer style="display: flex; text-align: center; justify-content: center;">
+        &copy; 2026 Tien Dat
+    </footer>
+    <script>
+        const reviews = [
+            {teacher: 'Ms Lan', comment: 'Tien Dat is a very hard-working student'},
+            {teacher: 'Mrs Hoa', comment: 'Tien Dat is very smart'},
+            {teacher: 'Mrs Thu', comment: 'Tien Dat is the most talented student I have ever met'}
+        ];
+
+        const list = document.getElementById("review-list");
+
+        reviews.forEach(function(review) {
+
+            const panel = document.createElement("article");
+            const quote = document.createElement("blockquote");
+            quote.textContent = review.comment;
+
+            const info = document.createElement("header")
+            info.textContent = review.teacher;
+
+            panel.appendChild(info);
+            panel.appendChild(quote);
+
+            list.appendChild(panel);
+
+            panel.style = "border: 1px solid black; padding: 10px; border-radius: 10px; width: 200px"
+        });
+
+    </script>
+
+</body>
+</html>

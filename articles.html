@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Website</title>
+</head>
+<body>
+    <header style="display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; padding: 20px 40px">
+        <h1>Tien Dat</h1>
+        <nav style="display: flex; flex-direction: row; gap: 20px">
+            <a href="index.html" style="color:black">
+                Homepage
+            </a>
+            <a href="projects.html" style="color:black">
+                Project
+            </a>
+            <a href="articles.html" style="color:black">
+                Articles
+            </a>
+            <a href="contact.html" style="color:black">
+                Contact
+            </a>
+        </nav>
+    </header>
+    <main style="display: flex; justify-content: center; flex-direction: column; text-align: center">
+        <h2>Articles</h2>
+        <section style="display: flex;  flex-direction: column; justify-items: flex-start;">
+            <article style="text-align: center;">
+                <h3><a href="#">What I learned building a semantic HTML website</a></h3>
+                <p><time datetime="2026-09-20">September 20, 2026</time></p>
+                <p>Notes on header, nav, main, section and footer, and why they matter.</p>
+            </article>
+
+            <article style="text-align: center;">
+                <h3><a href="#">Flexbox vs Grid</a></h3>
+                <p><time datetime="2026-09-10">September 10, 2026</time></p>
+                <p>When to use each layout system, with simple examples.</p>
+            </article>
+
+            <article style="text-align: center;">
+                <h3><a href="#">Debugging JavaScript with the Console</a></h3>
+                <p><time datetime="2026-09-01">September 1, 2026</time></p>
+                <p>How I find and fix errors using browser DevTools.</p>
+            </article>
+        </section>
+
+        <section style="display: flex; justify-content: center;">
+            <h2>Topics</h2>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px">
+        &copy; 2026 Tien Dat
+    </footer>
+</body>
+</html>
